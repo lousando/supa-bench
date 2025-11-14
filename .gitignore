@@ -7,3 +7,5 @@
 # JS
 node_modules
 
+# Go executables
+golang

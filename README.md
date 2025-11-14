@@ -1,6 +1,6 @@
 # Web Server Bench
 
-Test Machine:
+### Test Machine:
 
 - MacOS: 26.1 (25B78)
 - CPU: 12 (8 performance and 4 efficiency)
@@ -10,7 +10,9 @@ Test Machine:
   - 16-inch
   - Year 2023
 
-Test command:
+### Test command:
+
+**Note:** Run `go build golang.go` in each respective directory to compile the Go files.
 
 ```bash
 wrk -t 100 -c 100 -d 60s http://127.0.0.1:3000/
@@ -31,6 +33,9 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
 - Bun (v1.3.0) w/Elysia (v1.4.16) 
   - (wrk) 127,097.26 requests/sec (average)
     - 785.20us average latency
+- Go (v1.25.4)
+  - (wrk) 124,701.02 requests/sec (average)
+    - 809.38us average latency
 - Deno (v2.5.6)
   - (wrk) 113,300.35 requests/sec (average)
     - 0.90ms average latency
@@ -42,8 +47,12 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
 ## Fibonacci Up to 32
 
 - Elixir (v1.19.2)
-  - (ab) 3,555.93 requests/sec (average)
-  - (wrk) 138,485.93 requests/sec (average)
+  - (wrk) 139,391.97 requests/sec (average)
+    - 746.21us average latency
+  - Socket errors: connect 0, read 0, write 0, timeout 0
+- Go (v1.25.4)
+  - (wrk) 121,183.18 requests/sec (average)
+    - 0.86ms average latency
   - Socket errors: connect 0, read 0, write 0, timeout 0
 - Bun (v1.3.0)
   - (wrk) 46.81 requests/sec (average)

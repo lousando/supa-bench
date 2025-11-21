@@ -39,10 +39,15 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
 - Deno (v2.5.6)
   - (wrk) 113,300.35 requests/sec (average)
     - 0.90ms average latency
-- FrankenPHP
-  - (ab) 3,467.89 requests/sec (average)
-- PHP 8
-  - (ab) 1,055.34 requests/sec (average)
+- FrankenPHP (using PHP v8.4.15)
+  - (wrk) 21,991.01 requests/sec (average)
+    - 7.18ms average latency  
+- Python (v3.14)
+  - (wrk) 432.27 requests/sec (average)
+    - 145.63us average latency
+- PHP (v8.4.14)
+  - (wrk) 370.87 requests/sec (average)
+    - 2.81ms average latency
   
 ## Fibonacci Up to 32
 
@@ -54,6 +59,9 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
   - (wrk) 121,183.18 requests/sec (average)
     - 0.86ms average latency
   - Socket errors: connect 0, read 0, write 0, timeout 0
+- Python (v3.14)
+  - (wrk) 162.17 requests/sec (average)
+    - 163.69us average latency
 - Bun (v1.3.0)
   - (wrk) 46.81 requests/sec (average)
   - Socket errors: connect 0, read 0, write 0, timeout 2716
@@ -63,5 +71,7 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
 - Deno (v2.5.6)
   - (wrk) 25.10 requests/sec (average)
   - Socket errors: connect 0, read 0, write 0, timeout 1463
-- FrankenPHP
-  - (ab) 16 requests/sec (average)
+- FrankenPHP (using PHP v8.4.15)
+  - (wrk) 21.03 requests/sec (average)
+    - 1.15s average latency
+  - Socket errors: connect 0, read 0, write 0, timeout 1240

@@ -46,9 +46,6 @@ wrk -t 100 -c 100 -d 60s http://127.0.0.1:3000/
 - Python (v3.14)
   - (wrk) 432.27 requests/sec (average)
     - 145.63us average latency
-- PHP (v8.4.14)
-  - (wrk) 370.87 requests/sec (average)
-    - 2.81ms average latency
   
 ## Fibonacci Up to 32
 

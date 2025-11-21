@@ -16,8 +16,6 @@
 
 ```bash
 wrk -t 100 -c 100 -d 60s http://127.0.0.1:3000/
-# and
-ab -c 100 -n 100 "http://127.0.0.1:3000/"
 ```
 
 # Results
@@ -42,6 +40,9 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
 - FrankenPHP (using PHP v8.4.15)
   - (wrk) 21,991.01 requests/sec (average)
     - 7.18ms average latency  
+- Python (v3.14) w/FastAPI (v0.121.3)
+  - (wrk) 4,947.50 requests/sec (average)
+    - 20.25ms average latency
 - Python (v3.14)
   - (wrk) 432.27 requests/sec (average)
     - 145.63us average latency
@@ -59,6 +60,9 @@ ab -c 100 -n 100 "http://127.0.0.1:3000/"
   - (wrk) 121,183.18 requests/sec (average)
     - 0.86ms average latency
   - Socket errors: connect 0, read 0, write 0, timeout 0
+- Python (v3.14) w/FastAPI (v0.121.3)
+  - (wrk) 4,883.33 requests/sec (average)
+    - 20.52ms average latency
 - Python (v3.14)
   - (wrk) 162.17 requests/sec (average)
     - 163.69us average latency
